@@ -1,0 +1,24 @@
+{% include "header.html" %}
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How it came to us?</title>
+    <style>
+        body{
+            background-color: #F9E2AE;
+        }
+        video{
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <video controls autoplay loop src= {% static "images/Ice Cream.mp4" %}></video>
+</body>
+</html>

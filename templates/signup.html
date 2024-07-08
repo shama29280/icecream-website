@@ -1,0 +1,45 @@
+{% include "header.html" %}
+{% load static %}
+<span style="font-family: verdana, geneva, sans-serif;">
+  <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>Scoop's Sign Up</title>
+        <link rel="stylesheet" href={% static "css/style.css" %} />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href= {% static "css/login.css" %} />
+      </head>
+      
+      <body>
+        <div class="signup-box">
+          <h1>Sign Up</h1>
+          <h4>It's free and only takes a minute</h4>
+          <form action="/signup" method="POST">
+            {% csrf_token %}
+            <label>First Name</label>
+            <input type="text" placeholder="" name= "uname"/>
+            <label>Last Name</label>
+            <input type="text" placeholder="" name= "uname" />
+            <label>Email</label>
+            <input type="email" placeholder="" name= "email" />
+            <label>Password</label>
+            <input type="password" placeholder="" name= "password"/>
+            <label>Confirm Password</label>
+            <input type="password" placeholder="" name= "cpassword" />
+            <input type="submit" value="Submit" class="btn"/>
+          </form>
+          <p>
+            By clicking the Sign Up button,you agree to our <br />
+            <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+          </p>
+          <p>NOTE: The Username Will be Your Last Name</p>
+        </div>
+        <p class="para-1">
+          Already have an account? <a href="/login">Login here</a>
+        </p>
+      </body>
+    </html></span>
+    <script src= {% static "js/script.js" %}></script>
